@@ -25,7 +25,7 @@ const CreateProduct = () => {
             description: description.current.value,
             photo: photo.current.value,
             price: price.current.value,
-            quantity: []
+            quantity: 1
 
         }
         setNewProduct([...getNewProduct, newProduct])
