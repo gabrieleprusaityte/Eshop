@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import "./style.css"
 import {Link, useNavigate, useParams} from "react-router-dom";
 
-const Toolbar = ({getProductsToCart, getTotalProducts, setTotalProducts}) => {
+const Toolbar = ({getProductsToCart}) => {
 
     const nav = useNavigate()
     const text = useRef()
@@ -10,7 +10,11 @@ const Toolbar = ({getProductsToCart, getTotalProducts, setTotalProducts}) => {
     function search() {
         nav(text.current.value)
     }
-
+    function counter() {
+        let counter = 0
+        getProductsToCart.map(x => counter += x.quantity)
+        return counter
+    }
 
     return (
         <div>
@@ -29,7 +33,7 @@ const Toolbar = ({getProductsToCart, getTotalProducts, setTotalProducts}) => {
                     <div className="box">Create Product</div>
                 </Link>
                 <Link className="no-underline" to="/cart">
-                    <div className="box">Shopping Cart ({getProductsToCart.length})</div>
+                    <div className="box">Shopping Cart ({counter()})</div>
                 </Link>
             </div>
         </div>

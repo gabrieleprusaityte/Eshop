@@ -3,33 +3,24 @@ import "./style.css"
 import mainContext from "../context/mainContext";
 import {useNavigate} from "react-router-dom";
 
-const SingleProduct = ({product, index}) => {
+const SingleProduct = ({product}) => {
 
-    const {getProductsToCart, setProductsToCart, setTotalProducts, setTotalMoney} = useContext(mainContext)
+    const {getProductsToCart, setProductsToCart} = useContext(mainContext)
 
     const nav = useNavigate()
 
-    function addToCart(product, index) {
+    function addToCart(product) {
         if (!getProductsToCart.includes(product)) {
             getProductsToCart.push(product)
             setProductsToCart([...getProductsToCart])
 
             product.quantity = 1
-
             console.log(product)
             console.log(getProductsToCart)
         } else {
             product.quantity = getProductsToCart.find(x=>x.title===product.title).quantity+1
-
-
-
-
-
         }
-
     }
-
-
 
     function goToSingleProduct() {
         nav(`/product/${product.title}`)

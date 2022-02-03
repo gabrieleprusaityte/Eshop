@@ -13,18 +13,15 @@ function App() {
     const [getError, setError] = useState(null)
     const [getNewProduct, setNewProduct] = useState([])
     const [getProductsToCart, setProductsToCart] = useState([])
-    const [getTotalProducts, setTotalProducts] = useState(0)
-    const [getAddProduct, setAddProduct] = useState(0)
-    const [getRemoved, setRemoved] = useState([])
     const [getDeleted, setDeleted] = useState([])
-    const [getTotalMoney, setTotalMoney] = useState(0)
+
 
   return (
     <div className="App">
-        <mainContext.Provider value={{getError, setError, getNewProduct, setNewProduct, getProductsToCart, setProductsToCart, getAddProduct, setAddProduct, getRemoved, setRemoved, getDeleted, setDeleted, getTotalMoney, setTotalMoney}}>
+        <mainContext.Provider value={{getError, setError, getNewProduct, setNewProduct, getProductsToCart, setProductsToCart, getDeleted, setDeleted}}>
 
       <BrowserRouter>
-            <Toolbar getTotalProducts={getTotalProducts} setTotalProducts={setTotalProducts} getProductsToCart={getProductsToCart}/>
+            <Toolbar getProductsToCart={getProductsToCart}/>
         <Routes>
             <Route path="/" element={<AllProductsPage />}/>
             <Route path="/create" element={<CreateProductPage />}/>

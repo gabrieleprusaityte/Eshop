@@ -7,18 +7,15 @@ const ShoppingCart = ({product, index}) => {
     const {getProductsToCart, setProductsToCart, getDeleted, setDeleted, setTotalMoney} = useContext(mainContext)
 
     function addProduct(product, index) {
-        product.quantity = getProductsToCart.find(x => x.title === product.title).quantity + 1
-
-        for (let i = 0; i < getProductsToCart.length; i++) {
-            const quantityProduct = (Number(getProductsToCart[i].price) * getProductsToCart[i].quantity)
-        }
-
+        getProductsToCart[index].quantity++
+        setProductsToCart([...getProductsToCart])
     }
 
 
     function removeProduct(product) {
         if (product.quantity >= 2) {
-            product.quantity = getProductsToCart.find(x => x.title === product.title).quantity - 1
+            getProductsToCart[index].quantity--
+            setProductsToCart([...getProductsToCart])
         } else {
             setDeleted([...getDeleted, product])
             const deletedProduct = getProductsToCart.filter((x, i) => i)
