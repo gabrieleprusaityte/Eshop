@@ -1,0 +1,106 @@
+.toolbar {
+    height: 80px;
+    border: 2px solid black;
+    background-color: darkseagreen;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+.box:hover {
+    cursor: pointer;
+    color: gold;
+}
+.container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.productContainer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px;
+}
+.input {
+    height: 50px;
+    width: 450px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.btn {
+    height: 30px;
+    width: 300px;
+    margin: 30px 85px;
+    background-color: darkseagreen;
+}
+.btn:hover {
+    background-color: gold;
+    cursor: pointer;
+}
+.btn2 {
+    height: 50px;
+    width: 200px;
+    margin: 30px;
+    background-color: darkseagreen;
+}
+.btn2:hover {
+    background-color: gold;
+    cursor: pointer;
+}
+.color-red {
+    color: red;
+}
+.img {
+    height: 200px;
+}
+.img2 {
+    height: 150px;
+    margin: 5px;
+}
+.img3 {
+    height: 300px;
+}
+.no-underline {
+    text-decoration-line: none;
+}
+.column {
+    flex-direction: column;
+}
+.productInCart {
+    width: 1200px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.grow1 {
+    flex: 1;
+}
+.box2 {
+    height: 50px;
+    width: 200px;
+}
+.box3 {
+    height: 170px;
+    width: 200px;
+}
+.singleProductView {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.no-margin {
+    margin: 0;
+}
